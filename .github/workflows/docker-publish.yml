@@ -3,6 +3,9 @@ name: Build Docker Image for original branch
 on:
   release:
     types: [published]
+  push:  
+    branches:
+      - original/deploy
 
 env:
   # github.repository as <account>/<repo>
@@ -46,7 +49,7 @@ jobs:
         id: build-and-push
         uses: docker/build-push-action@v4.0.0
         with:
-          context: ./Dockerfile
+          context: Dockerfile
           push: true
           tags: "${{ env.IMAGE_NAME }}:original-${{ vars.GITHUB_REF_NAME }}"
           labels: ${{ steps.meta.outputs.labels }}
