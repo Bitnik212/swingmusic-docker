@@ -2,7 +2,7 @@ name: Build Docker Image for original branch
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 env:
   # github.repository as <account>/<repo>
