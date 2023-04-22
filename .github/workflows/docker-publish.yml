@@ -3,9 +3,9 @@ name: Build Docker Image for original branch
 on:
   release:
     types: [published]
-  push:  
-    branches:
-      - original/deploy
+#   push:  
+#     branches:
+#       - original/deploy
 
 env:
   # github.repository as <account>/<repo>
