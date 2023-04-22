@@ -1,5 +1,7 @@
 # Swing music
 
+[![Build Docker Image for original branch](https://github.com/Bitnik212/swingmusic-docker/actions/workflows/docker-publish.yml/badge.svg?branch=master)](https://github.com/Bitnik212/swingmusic-docker/actions/workflows/docker-publish.yml)
+
 ![SWING MUSIC PLAYER BANNER IMAGE](screenshots/readme-artist.webp)
 
 ![SWING MUSIC PLAYER BANNER IMAGE](screenshots/readme-album.webp)
