@@ -50,7 +50,7 @@ jobs:
         uses: docker/build-push-action@v4.0.0
         with:
           push: true
-          tags: "${{ env.IMAGE_NAME }}:original-${{ github.ref }}, ${{ env.IMAGE_NAME }}:build-${{ github.run_id }}"
+          tags: "${{ env.IMAGE_NAME }}:original-${{ github.ref_name }}, ${{ env.IMAGE_NAME }}:build-${{ github.run_id }}"
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
