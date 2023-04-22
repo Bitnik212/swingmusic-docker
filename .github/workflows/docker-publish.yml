@@ -52,5 +52,5 @@ jobs:
           push: true
           tags: "${{ env.IMAGE_NAME }}:original-${{ github.ref_name }}, ${{ env.IMAGE_NAME }}:build-${{ github.run_id }}"
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
