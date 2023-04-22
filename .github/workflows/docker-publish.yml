@@ -46,7 +46,7 @@ jobs:
         id: build-and-push
         uses: docker/build-push-action@v4.0.0
         with:
-          context: ./docker/Dockerfile
+          context: .
           push: true
           tags: "${{ env.IMAGE_NAME }}:original-${{ vars.GITHUB_REF_NAME }}"
           labels: ${{ steps.meta.outputs.labels }}
